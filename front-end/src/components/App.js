@@ -3,8 +3,9 @@ import axios from "axios";
 
 function App() {
   const [student, setStudent] = useState(null);
-  alert("Bem-vindo!!!");
+  
   useEffect(async () => {
+    alert("Bem-vindo!!!");
     const API_URL = process.env.REACT_APP_BASE_URL;
     try {
       const response = await axios.get(`${API_URL}/students/random`);
